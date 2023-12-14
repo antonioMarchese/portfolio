@@ -6,8 +6,8 @@ export default function HomeSection() {
       <div className="flex flex-col gap-y-6 sm:flex-row">
         <div className="text-xl font-semibold flex flex-col gap-y-6">
           <p>
-            I'm a <strong className="text-violet-500">back-end</strong> and
-            <strong className="text-violet-500"> front-end</strong> web
+            I'm a <strong className="text-fuchsia-500">back-end</strong> and
+            <strong className="text-fuchsia-500"> front-end</strong> web
             developer
           </p>
 
@@ -25,7 +25,7 @@ export default function HomeSection() {
             height={384}
           />
           <div className="p-2 -m-1px border-gray-500 border-1 flex items-center justify-start gap-x-2">
-            <div className="w-4 h-4 bg-violet-500" />
+            <div className="w-4 h-4 bg-fuchsia-500" />
             <div className="text-gray-400">
               Currently working at{" "}
               <strong className="text-white">GovOne</strong>

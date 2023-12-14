@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SocialBar() {
   return (
-    <div className="absolute top-0 left-4 hidden sm:flex sm:flex-col sm:gap-y-2 sm:justify-center sm:items-center">
+    <div className="fixed top-0 left-4 hidden sm:flex sm:flex-col sm:gap-y-2 sm:justify-center sm:items-center">
       <div className="w-0.5 h-40 bg-zinc-500" />
       <Link href="https://github.com/antonioMarchese" target="_blank">
         <Image

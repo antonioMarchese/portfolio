@@ -31,7 +31,7 @@ function NavBarElement({
 }) {
   return (
     <div className={active ? sectionStyles.active : sectionStyles.default}>
-      <strong className="text-violet-500">#</strong> {name}
+      <strong className="text-fuchsia-500 font-normal">#</strong> {name}
     </div>
   );
 }
@@ -46,8 +46,8 @@ function LanguageDropdown() {
         </button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
-        <DropdownMenu.Content className="w-14 bg-zinc-800 rounded-lg">
-          <DropdownMenu.Item className="group rounded-lg p-2 text-zinc-500  hover:border-none hover:cursor-pointer hover:bg-zinc-700 hover:text-white outline-none">
+        <DropdownMenu.Content className="w-14 bg-zinc-800 rounded-lg z-50">
+          <DropdownMenu.Item className="rounded-lg p-2 text-zinc-500  hover:border-none hover:cursor-pointer hover:bg-zinc-700 hover:text-white outline-none">
             PT
           </DropdownMenu.Item>
 
@@ -62,7 +62,7 @@ export default function NavBar() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   return (
-    <div className="sticky z-50 bg-app-bg top-0 left-0 w-full items-center justify-between text-xsm flex lg:text-base">
+    <div className="sticky z-40 pt-2 bg-app-bg top-0 left-0 w-full items-center justify-between text-xsm flex sm:py-6 lg:text-base">
       <div className="flex items-center justify-start gap-x-1 text-base">
         <FramerLogo size={16} weight="fill" />
         Antônio
@@ -114,7 +114,7 @@ export default function NavBar() {
         </Collapsible.Content>
       </Collapsible.Root>
 
-      <div className="hidden sm:flex items-center justify-center gap-x-8">
+      <div className="hidden z-50 sm:flex items-center justify-center gap-x-8">
         {sections.map((section) => (
           <NavBarElement
             name={section}
