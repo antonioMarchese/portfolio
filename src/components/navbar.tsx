@@ -1,19 +1,14 @@
 "use client";
 
-import {
-  CaretDown,
-  FramerLogo,
-  GithubLogo,
-  List,
-  X,
-} from "@phosphor-icons/react/dist/ssr";
+import { CaretDown, FramerLogo, List, X } from "@phosphor-icons/react/dist/ssr";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import * as Collapsible from "@radix-ui/react-collapsible";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const sections = ["home", "works", "about-me", "contact"];
+const sections = ["home", "projects", "about-me", "contact"];
+type possibleSections = "home" | "projects" | "about-me" | "contact";
 
 const sectionStyles = {
   active:
@@ -30,9 +25,12 @@ function NavBarElement({
   active?: boolean;
 }) {
   return (
-    <div className={active ? sectionStyles.active : sectionStyles.default}>
+    <Link
+      href={`#${name}`}
+      className={active ? sectionStyles.active : sectionStyles.default}
+    >
       <strong className="text-fuchsia-500 font-normal">#</strong> {name}
-    </div>
+    </Link>
   );
 }
 
@@ -60,6 +58,7 @@ function LanguageDropdown() {
 
 export default function NavBar() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [activeSection, setActiveSection] = useState<possibleSections>("home");
 
   return (
     <div className="sticky z-40 pt-2 bg-app-bg top-0 left-0 w-full items-center justify-between text-xsm flex sm:py-6 lg:text-base">
@@ -84,7 +83,7 @@ export default function NavBar() {
             <NavBarElement
               name={section}
               key={section}
-              active={section === "home"}
+              active={section === activeSection}
             />
           ))}
 
@@ -119,7 +118,7 @@ export default function NavBar() {
           <NavBarElement
             name={section}
             key={section}
-            active={section === "home"}
+            active={section === activeSection}
           />
         ))}
 
