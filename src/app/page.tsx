@@ -1,6 +1,7 @@
 import AboutMe from "@/components/aboutMe";
 import HomeSection from "@/components/home";
 import NavBar from "@/components/navbar";
+import Skills from "@/components/skills";
 import SocialBar from "@/components/socialBar";
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <NavBar />
 
       <HomeSection />
+      <Skills />
       <AboutMe />
     </main>
   );

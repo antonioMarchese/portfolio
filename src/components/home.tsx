@@ -19,10 +19,10 @@ export default function HomeSection() {
 
         <div className="w-full flex flex-col gap-y-0 items-center justify-center">
           <Image
-            src="/home_img.png"
+            src="/hacker_cat.png"
             alt="Man wearnig a jacket"
-            width={384}
-            height={384}
+            width={300}
+            height={300}
           />
           <div className="p-2 -m-1px border-gray-500 border-1 flex items-center justify-start gap-x-2">
             <div className="w-4 h-4 bg-fuchsia-500" />
