@@ -3,7 +3,7 @@ import SectionLayout from "./sectionLayout";
 
 export default function AboutMe() {
   return (
-    <SectionLayout title="about-me">
+    <SectionLayout id="about-me" title="about-me">
       <div className="flex flex-col items-center justify-center text-gray-400 font-medium sm:flex-row sm:items-start">
         <div className="flex flex-col gap-y-5 sm:w-3/4 ">
           <p>Hello, World. My name is Antonio 👋</p>
