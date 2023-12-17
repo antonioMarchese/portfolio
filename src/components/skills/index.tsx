@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionLayout from "./sectionLayout";
+import SectionLayout from "../sectionLayout";
 import SkillCard from "./skillCard";
 
 type skillsProps = {

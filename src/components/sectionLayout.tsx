@@ -10,7 +10,7 @@ export default function SectionLayout({
   return (
     <div
       id={id}
-      className="flex flex-col items-start justify-center gap-y-4 sm:gap-y-6"
+      className="relative flex flex-col items-start justify-center gap-y-4 sm:gap-y-6"
     >
       <div className="w-full flex items-center justify-start gap-x-4 text-lg sm:text-xl md:text-4xl font-semibold">
         <h1>
