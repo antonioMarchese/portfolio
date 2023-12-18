@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 
 import AboutMe from "@/components/aboutMe";
 import HomeSection from "@/components/home";
@@ -7,6 +6,7 @@ import NavBar from "@/components/navbar";
 import Skills from "@/components/skills";
 import SocialBar from "@/components/socialBar";
 import ProjectsSection from "@/components/projects";
+import Contacts from "@/components/contact";
 
 export default function Home() {
   return (
@@ -15,9 +15,14 @@ export default function Home() {
       <NavBar />
 
       <HomeSection />
+
       <ProjectsSection />
+
       <Skills />
+
       <AboutMe />
+
+      <Contacts />
     </main>
   );
 }
