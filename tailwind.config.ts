@@ -20,6 +20,23 @@ const config: Config = {
       fontSize: {
         xsm: "10px",
       },
+      transitionProperty: {
+        height: "height",
+      },
+      keyframes: {
+        "slide-down": {
+          from: { height: "0" },
+          to: { height: "100vh" },
+        },
+        "slide-up": {
+          from: { height: "100vh" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        downMenu: "slide-down 300ms ease-out",
+        upMenu: "slide-up 300ms ease-out",
+      },
     },
   },
   plugins: [],

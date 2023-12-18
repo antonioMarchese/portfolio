@@ -62,7 +62,7 @@ export default function NavBar() {
 
   return (
     <div className="sticky z-40 pt-2 bg-app-bg top-0 left-0 w-full items-center justify-between text-xsm flex sm:py-6 lg:text-base">
-      <div className="flex items-center justify-start gap-x-1 text-base">
+      <div className="flex items-center justify-start gap-x-1 text-base z-40">
         <FramerLogo size={16} weight="fill" />
         Antônio
       </div>
@@ -73,12 +73,12 @@ export default function NavBar() {
         onOpenChange={setIsMenuOpened}
       >
         <Collapsible.Trigger asChild>
-          <button className="rounded-full p-2 flex items-center justify-center outline-none">
+          <button className="rounded-full p-2 flex items-center justify-center outline-none z-40">
             {isMenuOpened ? <X size={24} /> : <List size={24} />}
           </button>
         </Collapsible.Trigger>
 
-        <Collapsible.Content className="absolute pt-6 top-[100%] z-10 bg-app-bg w-screen flex flex-col gap-y-4 px-10 items-start justify-center text-lg">
+        <Collapsible.Content className="absolute pt-6 top-0 z-10 bg-app-bg w-full flex flex-col gap-y-4 items-start justify-center text-lg h-0 transition-all data-[state='open']:h-screen duration-300 ease-in-out">
           {sections.map((section) => (
             <NavBarElement
               name={section}

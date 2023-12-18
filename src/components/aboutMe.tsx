@@ -19,7 +19,7 @@ export default function AboutMe() {
 
         <div className="flex items-center justify-center w-full p-6 sm:w-1/3 md:-translate-y-16">
           <Image
-            src="/about_me.png"
+            src="/squirrel_me.png"
             width={380}
             height={380}
             alt="Man hidding his face"
